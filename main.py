@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from solution import brute_force, calculate_prefix, calculate_kadane
 
 hundred_list, thousand_list, ten_list, fifty_list = [], [], [], []
-numberOf = [100, 1000, 10000]
+numberOf = [100, 1000, 5000, 10000]
 functions = [brute_force, calculate_prefix, calculate_kadane]
 host = list()
 func = ""
@@ -36,7 +36,8 @@ for j, f in enumerate(functions):
         start = timeit.default_timer()
         result += func + " --> " + str(f(host[i]))
         stop = timeit.default_timer()
-        result += " for time: " + str(stop - start)
+        res = round(stop - start, 6)
+        result += " for time: " + str(res)
         print(result + '\n')
         time_passed.append(stop - start)
     plt.plot(numberOf, time_passed, label=func)
