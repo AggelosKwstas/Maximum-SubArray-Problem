@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from solution import brute_force, calculate_prefix, calculate_kadane
 
 hundred_list, thousand_list, ten_list, fifty_list = [], [], [], []
-numberOf = [100, 1000, 5000, 10000]
+numberOf = [100, 500, 1000, 5000]
 functions = [brute_force, calculate_prefix, calculate_kadane]
 host = list()
 func = ""
