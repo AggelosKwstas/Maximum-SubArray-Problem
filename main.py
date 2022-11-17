@@ -37,7 +37,7 @@ for j, f in enumerate(functions):
         result += func + " --> " + str(f(host[i]))
         stop = timeit.default_timer()
         res = round(stop - start, 6)
-        result += " for time: " + str(res)
+        result += "   time elapsed : " + str(res) + " seconds"
         print(result + '\n')
         time_passed.append(stop - start)
     plt.plot(numberOf, time_passed, label=func)

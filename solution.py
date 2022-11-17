@@ -9,7 +9,7 @@ def brute_force(a_list):
             if max < sum:
                 max, start, end = sum, i, j
 
-    return max, start, end
+    return "max is: " + str(max) + "      " + "start index is : " + str(start) + "      " + "end index is : " + str(end)
 
 
 def calculate_prefix(test_list):
@@ -27,7 +27,8 @@ def calculate_prefix(test_list):
             if max_sum < sum:
                 max_sum, start, end = sum, i, j
 
-    return max_sum, start, end
+    return "max is: " + str(max_sum) + "      " + "start index is : " + str(start) + "      " + "end index is : " + str(
+        end)
 
 
 def calculate_kadane(a_list):
@@ -48,4 +49,5 @@ def calculate_kadane(a_list):
             start = i + 1
             break
 
-    return max_val, start, max_index
+    return "max is: " + str(max_val) + "      " + "start index is : " + str(start) + "      " + "end index is : " + str(
+        max_index)
